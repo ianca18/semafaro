@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+div#buttons {
+    column-count: 4;
+}
+#red.button,
+#yellow.button,
+#green.button,
+#automatic.button {
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all 0.35s;
+}
+#red.button,
+#yellow.button,
+#green.button,
+#automatic.button {
+    position: relative;
+    z-index: 2;
+}
+#red.button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all 0.35s;
+}
+
+#yellow.button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: yellow;
+    transition: all 0.35s;
+}
+
+#green.button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: green;
+    transition: all 0.35s;
+}
+
+#automatic.button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(114, 114, 114);
+    transition: all 0.35s;
+}
+#red.button:hover,
+#yellow.button:hover,
+#green.button:hover,
+#automatic.button:hover {
+    color: whitesmoke;
+}
+
+#red.button:hover:after,
+#yellow.button:hover:after,
+#green.button:hover:after,
+#automatic.button:hover:after {
+    width: 100%;
+}
